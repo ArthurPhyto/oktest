@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crawler de Domaines Expirés</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Crawler de Domaines Expirés</h1>
+    
+    <div>
+        <input type="url" id="urlInput" placeholder="Entrez l'URL de départ" required>
+        <button onclick="startCrawling()">Démarrer le crawl</button>
+    </div>
+
+    <div class="stats">
+        <div class="stat-item">
+            <span>URLs Crawlées:</span>
+            <span id="crawledCount">0</span>
+        </div>
+        <div class="stat-item">
+            <span>Sites Externes:</span>
+            <span id="externalCount">0</span>
+        </div>
+        <div class="stat-item">
+            <span>Erreurs:</span>
+            <span id="errorCount">0</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="panel">
+            <h2>URLs Crawlées</h2>
+            <div id="crawledUrls" class="url-list"></div>
+        </div>
+        
+        <div class="panel">
+            <h2>Sites Externes et Erreurs</h2>
+            <div id="externalSites" class="url-list"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/client.js"></script>
+</body>
+</html>
